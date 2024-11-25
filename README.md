@@ -51,8 +51,7 @@ Follow these steps to set up the project locally:
 
 ## Running the App
 To run the Streamlit app locally and view the stock price predictions:
-    
-    ```bash
+
     streamlit run app.py
 
 ## Project Structure
