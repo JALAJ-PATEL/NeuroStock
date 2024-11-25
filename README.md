@@ -26,38 +26,37 @@ Follow these steps to set up the project locally:
    git clone https://github.com/JALAJ-PATEL/NeuroStock.git
 
 2. Navigate to the project directory:
-    bash```
+    ```bash
     cd NeuroStock
 
 3. Create a virtual environment (optional but recommended):
-    bash```
+    ```bash
     python -m venv .venv
 
 4. Activate the virtual environment:
 
     - On Windows:
-        bash```
+        ```bash
         .\.venv\Scripts\activate
 
     - On macOS/Linux:
-        bash```
+        ```bash
         source .venv/bin/activate
     
 5. Install the required dependencies:
 
-    bash```
+    ```bash
     pip install -r requirements.txt
 
 
 ## Running the App
 To run the Streamlit app locally and view the stock price predictions:
 
-    bash```
+    ``bash
     streamlit run app.py
 
-## **Project Structure**
+## Project Structure
 
-    bash```
     NeuroStock/
     ├── .venv/                   # Virtual environment folder (optional)
     ├── app.py                   # Streamlit application for stock predictions

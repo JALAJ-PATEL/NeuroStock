@@ -6,8 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
-# Ignore model files (optional, if the model is too large)
-*.h5
+# Ignore the LSTM model file
+stock_dl_model.h5
 
 # Distribution / packaging
 .Python
