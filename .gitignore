@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Ignore model files (optional, if the model is too large)
+*.h5
+
 # Distribution / packaging
 .Python
 build/
