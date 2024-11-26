@@ -5,10 +5,11 @@
 ## Features
 - Fetch stock data using Yahoo Finance API
 - Preprocess data for LSTM-based predictions
-- Train a deep learning model to predict future stock prices
+- Train a deep learning model (now enhanced with technical indicators and Bidirectional LSTM) to predict future stock prices
 - Interactive Streamlit dashboard for stock data visualization and predictions
+- Dynamic customization of EMA spans and downloadable prediction data
 
-## Technologies Used
+## Python Libraries Used
 - Python
 - TensorFlow & Keras
 - Streamlit
@@ -57,35 +58,39 @@ To run the Streamlit app locally and view the stock price predictions:
 ## Project Structure
 
     NeuroStock/
-    ├── .venv/                   # Virtual environment folder (optional)
+    ├── .venv/                   # Virtual environment  folder (optional)
     ├── app.py                   # Streamlit application for stock predictions
-    ├── stock_price_predict.ipynb # Jupyter notebook for model training
-    ├── stock_dl_model.h5        # Trained LSTM model
+    ├── model.ipynb              # Jupyter notebook for model training
+    ├── stock_model.h5           # Trained LSTM model
     ├── requirements.txt         # Project dependencies
     ├── README.md                # Project description
     └── .gitignore               # Files to exclude from version control
 
+
 ## Model Overview
 
-The project uses an **LSTM (Long Short-Term Memory)** model to predict future stock prices based on historical data. The model is trained using stock price data obtained from **Yahoo Finance**. It uses the following approach:
+The project uses an **LSTM (Long Short-Term Memory)** model to predict future stock prices based on historical data. The model is enhanced with technical indicators and uses a **Bidirectional LSTM** architecture for better performance. The model is trained using stock price data obtained from **Yahoo Finance**. It uses the following approach:
 
 1. **Data Preprocessing**: 
    - Data is scaled using `MinMaxScaler` and split into training and testing datasets.
+   - Added features: Moving Averages (MA20, MA50), Relative Strength Index (RSI), and Bollinger Bands.
    
 2. **Model Training**:
-   - An LSTM model is trained on the past 100 days of stock data to predict future prices.
+   - A Bidirectional LSTM model is trained on the past 150 days of stock data.
+   - Dropout layers are added to prevent overfitting.
    
 3. **Model Evaluation**:
-   - The model's predictions are evaluated against actual stock prices, and accuracy is visualized.
+    - Metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) are used to evaluate the model's accuracy.
+    - The model's predictions are visualized alongside actual stock prices.
 
 ## Predictions & Visualizations
 
-The Streamlit app allows users to:
+The Streamlit app provides:
 
-- Enter a stock ticker (e.g., **AAPL**, **TSLA**, etc.)
-- View historical stock data
-- Visualize stock prices with **Exponential Moving Averages (EMA)**
-- Compare predicted stock prices with actual prices
+- **Dynamic EMA Visualization:** Customize short-term and long-term EMA spans.
+- **Detailed Performance Metrics:** Display Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).
+- **Predicted Price Summary:** Maximum, minimum, and average predicted prices.
+- **Downloadable Data:** Export predicted vs. actual stock prices as a CSV file.
 
 ## Contributing
 

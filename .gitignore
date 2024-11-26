@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Ignore the LSTM model file
-stock_dl_model.h5
+stock_model.h5
 
 # Distribution / packaging
 .Python
