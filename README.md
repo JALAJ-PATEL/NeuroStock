@@ -2,6 +2,12 @@
 
 **NeuroStock** is a machine learning project that predicts stock market prices using a Long Short-Term Memory (LSTM) neural network model. The project provides a web-based interface using Streamlit to visualize stock price trends, predictions, and historical data.
 
+## 🚀 Try It Live  
+
+Experience the **NeuroStock** app in action! Click below to explore real-time stock price predictions and interactive visualizations.  
+
+[![Streamlit App](https://img.shields.io/badge/Live%20App-NeuroStock-FF4B4B?style=for-the-badge&logo=streamlit)](https://neurostock.streamlit.app/)
+
 ## Features
 - Fetch stock data using Yahoo Finance API
 - Preprocess data for LSTM-based predictions
